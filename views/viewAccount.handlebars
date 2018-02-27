@@ -1,0 +1,93 @@
+<!-- This is the page where the user can view/edit their bucketlist and find travel buddies -->
+<!-- Page Title -->
+<div id="profileHeader" class="card">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Your Brew List</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a href="/view/breweries">
+                        Add Breweries
+                    </a>
+                </li>
+                <li>
+                    <a href="/user/logout">
+                        <i class="fa fa-sign-in" aria-hidden="true"></i>Log Out
+                    </a>
+                </li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="/view/breweries">Add Breweries</a></li>
+                <li><a href="/user/logout">Log Out</a>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+{{!-- display detail of profile --}}
+<div id="detail" class="card teal darken-1 profileDetails center-align">
+    <div class="card-content">
+        {{#each bucketlist}}
+        <p style="color: white; font-size: 20px;"><b>Name:</b> {{firstName}} {{lastName}}</p>
+        <p style="color: white; font-size: 18px;"><b>Email:</b> {{email}}</p>
+        {{/each}}
+    </div>
+</div>
+</div>
+<!-- Page Content Container -->
+<div id="bottomContainer">
+    <!-- Countries Container -->
+    <div class="card white" id="countryContainer">
+        <div class='center-align' style="font-size: 30px;">Breweries you picked</div>
+        <!-- Dynamically Render Country Tiles -->
+        <main id="tilesContent">
+            {{#each brewlist}} 
+            {{#each Breweries}}
+            <div class="tile card transparent">
+                <div class="card-content black-text">
+                    <div>{{this.breweriesName}}</div>
+                    <!-- Image API LINK HERE -->
+                    <div class="imgDiv" style="background-image: url('{{this.breweriesImageURL}}')"></div>
+                    <div class="plusMinusIcon" data-userid="{{this.breweriesLikes.UserId}}" data-locationtype="breweries" data-locationid="{{this.id}}"><a class="btn btn-floating waves-effect waves-light"><i class="material-icons">remove</i></a>
+                    </div>
+                </div>
+                <!-- Modal Trigger -->
+                <div class="card-action teal lighten-4">
+                    <a id="button" class="waves-effect waves-light btn brewButton" href="#modal1" data-locationtype="breweries" data-userid="{{this.breweriesLikes.UserId}}" data-locationname="{{this.breweriesName}}" data-locationid="{{this.id}}">Find Brew Pal</a>
+                </div>
+            </div>
+            {{/each}}
+            {{/each}}
+        </main>
+    </div>
+</div>
+<!-- Module to show shared Users -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4 id="modalTitle"></h4>
+        <table id="buddyTable">
+            <!-- Dynamically append users to table -->
+        </table>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Got It!</a>
+    </div>
+</div>
+
+{{!-- <!-- Link in jQuery -->
+<script type="text/javascript" src="/assets/javascript/jquery-3.1.1.min.js"></script>
+<!-- Compiled and minified JavaScript (for modal) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script> --}}
+<!-- Modal click Listener -->
+
+<script type="text/javascript" src="/assets/javascript/brew-buddy-finder.js"></script>
+<!-- Remove Location from Bucketlist -->
+<script type="text/javascript" src="/assets/javascript/brewery-remove-location.js"></script>
+
+{{!-- Mobile Sidebar jQuery --}}
+<script type="text/javascript">
+    $( document ).ready(function(){
+        $(".button-collapse").sideNav();
+    });
+</script>
