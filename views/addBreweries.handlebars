@@ -1,0 +1,49 @@
+<!-- This is the page that the user can use to add breweries to their bucket list -->
+<!-- Page Title -->
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Brewery Portel</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+                <a href="/view/brewerieslist">
+                   View Profile
+                </a>
+            </li>
+            <li>
+                <a href="/user/logout">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>Log Out
+                </a>
+            </li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="/view/brewerieslist">View Profile</a></li>
+            <li><a href="/user/logout">Log Out</a>
+        </ul>
+    </div>
+</nav>
+
+<!-- Dynamically Render Brewery Tiles -->
+<main id="tilesContent" data-userid="{{this.user}}">
+    {{#each cities}}
+    <div class="tile card white">
+        <div class="card-content black-text">
+            <div>{{this.breweriesName}}</div>
+            <div class="imgDiv" style="background-image: url('{{this.breweriesImageURL}}')"></div>
+            <div class="plusMinusIcon" data-locationtype="city" data-locationid="{{this.id}}"><a class="btn btn-floating waves-effect waves-light teal darken-1"><i class="material-icons">add</i></a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</main>
+<!-- Link in jQuery -->
+{{!-- <script type="text/javascript" src="/assets/javascript/jquery-3.1.1.min.js"></script> --}}
+<!-- Add Location to Bucketlist -->
+<script type="text/javascript" src="/assets/javascript/add-breweries.js"></script>
+
+{{!-- Mobile Sidebar jQuery --}}
+<script type="text/javascript">
+    $( document ).ready(function(){
+        $(".button-collapse").sideNav();
+    });
+</script>
