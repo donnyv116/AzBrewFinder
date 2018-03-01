@@ -1,11 +1,10 @@
 @font-face {
-    font-family: 'Circular Std'; /*a name to be used later*/
-    src: url(fonts/CircularStd-Book.woff); /*URL to font*/
+    font-family: 'PT Serif', serif;
+    src: url('https://fonts.googleapis.com/css?family=PT+Serif');
 }
 
 i.fa {
 	margin-right: 10px;
-	/*font-size: 12pt;*/
 }
 
 nav {
@@ -52,7 +51,6 @@ nav {
 #destinationRow {
 	width: 100%;
 	height: 500px;
-	/*background-color: red;*/
 	position: relative;
 	top: -64px;
 	z-index: -1;
@@ -78,7 +76,6 @@ nav {
 
 #overlay {
 	width: 100%;
-	/*height: 400%;*/
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -89,7 +86,6 @@ nav {
 	left: 10%;
 	height: 50px;
 	line-height: 50px;
-	/*font-family: "Circular Std",sans-serif;*/
 }
 
 #mainText {
