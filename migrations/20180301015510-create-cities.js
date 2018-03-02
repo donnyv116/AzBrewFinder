@@ -1,23 +1,17 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Breweries', {
+    return queryInterface.createTable('Cities', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      breweryName: {
+      cityName: {
         type: Sequelize.STRING
       },
-      address: {
-        type: Sequelize.STRING
-      },
-      phone#: {
-        type: Sequelize.STRING
-      },
-      brewImageURL: {
+      cityImageURL: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -31,6 +25,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Breweries');
+    return queryInterface.dropTable('Cities');
   }
 };
