@@ -13,8 +13,9 @@ module.exports = {
       }], {});
     */
  return queryInterface.bulkInsert('Breweries', [
-      {breweryName: "Rock Bottom",address: "123 Fake way", phone#: "602-555-8798" brewImageURL:"https://www.totalhappyhour.com/preview/500-450/content/files/mod.happyhour/021d4712e5da40b894157c1db1e04e4a.jpg" createdAt: new Date(), updatedAt: new Date()},
-      {breweryName: "Black Bridge",address: "3221 Fake way", phone#: "602-555-5646" brewImageURL:"https://upload.wikimedia.org/wikipedia/en/2/2c/RollingRock301_Logo.JPG" createdAt: new Date(), updatedAt: new Date()},
+      // {breweryName: "Rock Bottom",address: "123 Fake way", phone#: "602-555-8798" brewImageURL:"https://www.totalhappyhour.com/preview/500-450/content/files/mod.happyhour/021d4712e5da40b894157c1db1e04e4a.jpg" createdAt: new Date(), updatedAt: new Date()},
+      {breweryName: "Black Bridge", brewImageURL:"https://upload.wikimedia.org/wikipedia/en/2/2c/RollingRock301_Logo.JPG", createdAt: new Date(), updatedAt: new Date()},
+      {breweryName: "Black Bridge", brewImageURL:"https://upload.wikimedia.org/wikipedia/en/2/2c/RollingRock301_Logo.JPG", createdAt: new Date(), updatedAt: new Date()},
       
       ], {});
 

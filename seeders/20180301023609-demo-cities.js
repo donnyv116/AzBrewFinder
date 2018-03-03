@@ -16,7 +16,7 @@ module.exports = {
       {cityName: "Glendale", cityImageURL:"http://www.glendaleaz.com/airport/images/SuperBowlSlide_Airport_lg.jpg" createdAt: new Date(), updatedAt: new Date()},
       {cityName: "Phoenix", cityImageURL:"http://www.luxurymeetingssummit.com/wp-content/uploads/2017/01/Phoenix-AZ.jpg" createdAt: new Date(), updatedAt: new Date()},
       {cityName: "Tempe", cityImageURL:"http://www.freedomautoglass.com/wp-content/uploads/2014/11/tempe-az.jpg" createdAt: new Date(), updatedAt: new Date()},
-      {cityName: "Gilbert", cityImageURL:"http://www.clustermapping.us/sites/default/files/styles/full/public/images/blog/Downtown%20Gilbert%20Night.jpg?itok=T7HIIDLG" createdAt: new Date(), updatedAt: new Date()}
+      {cityName: "Gilbert", cityImageURL:"http://www.clustermapping.us/sites/default/files/styles/full/public/images/blog/Downtown%20Gilbert%20Night.jpg?itok=T7HIIDLG" createdAt: new Date(), updatedAt: new Date()},
     ], {});
 
   },
