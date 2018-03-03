@@ -7,21 +7,18 @@ models = require('../models');
 module.exports = function(app){
 
   // Serialize
-
   passport.serializeUser(function(user, done) {
     done(null, user);
   });
 
   // Deserialize
-
   passport.deserializeUser(function(user, done) {
     models.Users.findById(user.id, function(err, user) {
       done(err, user);
     });
   });
 
-  // For login purposes
-
+  // Logining in
   passport.use('local', new LocalStrategy({
       usernameField: 'email',
       passwordField: 'password'
@@ -40,8 +37,7 @@ module.exports = function(app){
     }
   ));
 
-// For Signup purposes
-
+// Signing up
   passport.use('local-signup', new LocalStrategy({
       passReqToCallback: true,
       usernameField: 'email',
