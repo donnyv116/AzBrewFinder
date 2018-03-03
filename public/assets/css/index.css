@@ -12,6 +12,10 @@ nav {
 	z-index: 10;
 }
 
+.nav-links-full {
+	z-index: 100;
+}
+
 .index-nav-wrapper {
 	padding-left: 5px;
 	background-color: transparent;
@@ -24,7 +28,7 @@ nav {
 
 .imgDiv {
 	width: 100%;
-	height: 500px;
+	height: 650px;
 	background-position: 50% 50%;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -83,7 +87,7 @@ nav {
 #subText {
 	position: relative;
 	top: 50%;
-	left: 10%;
+	left: 70%;
 	height: 50px;
 	line-height: 50px;
 }
