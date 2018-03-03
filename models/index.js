@@ -1,4 +1,3 @@
-// NOTE THAT WHEN DEPLOYING TO HEROKU, we need to set process.env.JAWSDB_URL on line 16.
 
 'use strict';
 

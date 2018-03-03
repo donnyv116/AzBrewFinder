@@ -8,17 +8,18 @@ create table users(
 	lastName varchar(10) not null, 
 	email varchar(10) not null,
 	password varchar(10) not null,
-	createdAt new Date(),
-	updatedAt new Date()
-      
-)
+	createdAt timestamp not null,
+	updatedAt timestamp not null,
+	primary key(id)      
+);
 
 create table breweries(
 	id mediumint(11) auto_increment not null,
     breweryName varchar(100) not null,
     brewImageURL varchar(100) not null,
+    createdAt timestamp not null,
     primary key(id)
-)
+);
 
 insert into Breweries(breweryName, brewImageURL)
 values("Barrio Brewing","http://barriobrewing.co/wp-content/plugins/ageverify-custom/includes/AVlogo.pngDesert"),

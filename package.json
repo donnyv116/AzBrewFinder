@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "set NODE_ENV=production && node server.js",
-     "setupDB": "sequelize db:migrate && sequelize db:seed:all && node db/seed-user-likes.js",
-     "heroku-postbuild": "sequelize db:migrate && sequelize db:seed:all && node db/seed-user-likes.js"
+    "setupDB": "sequelize db:migrate && sequelize db:seed:all && node db/seed-user-likes.js"
   },
   "repository": {
     "type": "git",
@@ -23,22 +22,20 @@
   },
   "homepage": "https://github.com/donnyv116/AzBrewFinder#readme",
   "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
-    "connect-ensure-login": "^0.1.1",
+    "config-json": "^1.0.0",
+    "config.json": "0.0.4",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
     "fb": "^2.0.0",
     "fs": "0.0.1-security",
-    "method-override": "^2.3.10",
     "morgan": "^1.9.0",
+    "method-override": "^2.3.10",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.2",
     "passport": "^0.4.0",
-    "passport-facebook": "^2.1.1",
-    "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "sequelize": "^4.33.4",
     "sequelize-cli": "^4.0.0"
