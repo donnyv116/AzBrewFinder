@@ -82,7 +82,7 @@ nav {
 #mainText,
 #subText {
 	position: relative;
-	top: 40%;
+	top: 50%;
 	left: 10%;
 	height: 50px;
 	line-height: 50px;
@@ -102,6 +102,6 @@ nav {
 }
 
 #subText {
-	top: calc(40% + 10px);
+	top: calc(47% + 10px);
 	font-size: 12pt;
 }
