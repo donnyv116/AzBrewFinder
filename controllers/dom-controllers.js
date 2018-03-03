@@ -68,7 +68,7 @@ domRouter.get('/user/logout', function(req, res) {
 
 
 
-domRouter.get('/view/breweries', isUser, function(req, res){
+domRouter.get('/view/brewerylist', isUser, function(req, res){
 
   
   models.Users.findAll({
@@ -80,7 +80,7 @@ domRouter.get('/view/breweries', isUser, function(req, res){
   }).then(function(data){
 
     
-    var hbsObject = { breweries: data };
+    var hbsObject = { brewerylist: data };
 
     res.render('viewAccount', hbsObject);
 
