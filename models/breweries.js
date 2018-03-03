@@ -1,10 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Breweries = sequelize.define('Breweries', {
-    breweryNamee: DataTypes.STRING,
+    breweriesNamee: DataTypes.STRING,
     // address: DataTypes.STRING,
     // phone#: DataTypes.STRING,
-    brewImageURL: DataTypes.STRING
+    breweriesImageURL: DataTypes.STRING
   }, {
  classMethods: {
  	associate: function(models) {
