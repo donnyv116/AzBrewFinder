@@ -28,7 +28,7 @@
 {{!-- display detail of profile --}}
 <div id="detail" class="card teal darken-1 profileDetails center-align">
     <div class="card-content">
-        {{#each bucketlist}}
+        {{#each brewerieslist}}
         <p style="color: white; font-size: 20px;"><b>Name:</b> {{firstName}} {{lastName}}</p>
         <p style="color: white; font-size: 18px;"><b>Email:</b> {{email}}</p>
         {{/each}}
@@ -37,10 +37,10 @@
 </div>
 <!-- Page Content Container -->
 <div id="bottomContainer">
-    <!-- Countries Container -->
-    <div class="card white" id="countryContainer">
+    <!-- Breweries Container -->
+    <div class="card white" id="breweriesContainer">
         <div class='center-align' style="font-size: 30px;">Breweries you picked</div>
-        <!-- Dynamically Render Country Tiles -->
+        <!-- Dynamically Render Breweries Tiles -->
         <main id="tilesContent">
             {{#each brewlist}} 
             {{#each Breweries}}
