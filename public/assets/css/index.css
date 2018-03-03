@@ -12,6 +12,10 @@ nav {
 	z-index: 10;
 }
 
+.nav-links-full {
+	z-index: 100;
+}
+
 .index-nav-wrapper {
 	padding-left: 5px;
 	background-color: transparent;
