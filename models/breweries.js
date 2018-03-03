@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     breweriesImageURL: DataTypes.STRING
   }, {
  classMethods: {
- 	associate: function(models) {
+  associate: function(models) {
     // associations can be defined here
     Breweries.belongsToMany(models.Users, {through: 'BreweryLikes'});
       }
