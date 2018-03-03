@@ -1,16 +1,16 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var User = sequelize.define('User', {
+  var User = sequelize.define('Users', {
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
-    email: DataTypes.STRING
-   password: DataTypes.STRING
+    email: DataTypes.STRING,
+    password: DataTypes.STRING
   }, {
     classMethods: {
       associate: function(models) {
 
-        Users.belongsToMany(models.breweries, {through: 'Breweries'});
-        Users.belongsToMany(models.Cities, {through: 'Cities'});
+        Users.belongsToMany(models.breweries, {through: 'BreweryLikes'});
+        // Users.belongsToMany(models.Cities, {through: 'CityLikes'});
         
         
       }
@@ -28,5 +28,5 @@ module.exports = (sequelize, DataTypes) => {
   Users.hook('beforeCreate', function(user, options) {
     user.password = user.generateHash(user.password);
   });
-  return User;
+  return Users;
 };
