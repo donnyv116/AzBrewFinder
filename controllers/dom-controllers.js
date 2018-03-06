@@ -4,12 +4,14 @@ var models = require('../models');
 var path = require('path');
 var passport = require("passport");
 var USER_SESSION = null;
-
+var bcrypt = require('bcrypt');
+const saltRounds = 10;
+var Promise = require('bluebird');
 
 function signInUser(req, res, error, user, info){
-  if(error) { res.redirect('/login'); } 
+  if(error) { return res.redirect('/login'); } 
   
-  if(!user) { res.redirect('/login');} 
+  if(!user) { return res.redirect('/login');} 
   USER_SESSION = user;
   console.log(USER_SESSION);
 
