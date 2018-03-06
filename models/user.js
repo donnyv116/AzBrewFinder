@@ -1,4 +1,10 @@
 'use strict';
+
+var bcrypt = require('bcrypt');
+const saltRounds = 10;
+var Promise = require('bluebird');
+  
+
 module.exports = (sequelize, DataTypes) => {
 const Users = sequelize.define('Users', { 
     firstName: DataTypes.STRING,
